@@ -1,0 +1,54 @@
+
+{
+  "groups": [
+    {
+      "name": "gateway.fallback",
+      "type": "com.example.apigateway.config.GatewayFallbackProperties",
+      "sourceType": "com.example.apigateway.config.GatewayFallbackProperties",
+      "description": "Custom fallback messages for API Gateway circuit breaker endpoints."
+    }
+  ],
+  "properties": [
+    {
+      "name": "gateway.fallback.user.message",
+      "type": "java.lang.String",
+      "description": "Message returned when user-microservice is unavailable.",
+      "defaultValue": "User service is currently unavailable. Please try again later."
+    },
+    {
+      "name": "gateway.fallback.enrollment.message",
+      "type": "java.lang.String",
+      "description": "Message returned when enrollment-microservice is unavailable.",
+      "defaultValue": "Enrollment service is currently unavailable. Please try again later."
+    },
+    {
+      "name": "gateway.fallback.course.message",
+      "type": "java.lang.String",
+      "description": "Message returned when course-microservice is unavailable.",
+      "defaultValue": "Course service is currently unavailable. Please try again later."
+    }
+  ],
+  "hints": [
+    {
+      "name": "gateway.fallback.user.message",
+      "values": [
+        { "value": "User microservice temporarily down." },
+        { "value": "User API is overloaded, please retry later." }
+      ]
+    },
+    {
+      "name": "gateway.fallback.enrollment.message",
+      "values": [
+        { "value": "Enrollment microservice temporarily down." },
+        { "value": "Enrollment API is overloaded, please retry later." }
+      ]
+    },
+    {
+      "name": "gateway.fallback.course.message",
+      "values": [
+        { "value": "Course microservice temporarily down." },
+        { "value": "Course API is overloaded, please retry later." }
+      ]
+    }
+  ]
+}
